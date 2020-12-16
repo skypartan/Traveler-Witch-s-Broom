@@ -8,6 +8,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 
 
 namespace TravelerWitchBroom.Mounts
@@ -87,7 +88,6 @@ namespace TravelerWitchBroom.Mounts
 		{
 			var data = (BroomSpecificData) player.mount._mountSpecificData;
 			
-
 			if (data.BoostChargeProgress < 100)
 				data.BoostChargeProgress += data.BoostRechargeRate;
 			if (data.BoostChargeProgress > 100)
@@ -104,6 +104,8 @@ namespace TravelerWitchBroom.Mounts
 			ref Rectangle frame, ref Color drawColor, ref Color glowColor, ref float rotation,
 			ref SpriteEffects spriteEffects, ref Vector2 drawOrigin, ref float drawScale, float shadow)
 		{
+
+			//NetMessage.SendChatMessageToClient(NetworkText.FromLiteral(playerDrawData.Count.ToString()), Color.White, 0);
 			return true;
 		}
 	}

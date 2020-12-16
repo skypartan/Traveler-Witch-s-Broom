@@ -1,1 +1,3 @@
-A faster Witch's Broom
+[WIP] A faster Witch's Broom
+
+The current recipe is provisory, and will be fixed when the basic broom mechanic is finalized
